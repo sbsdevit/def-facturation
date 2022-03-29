@@ -27,7 +27,7 @@ class UserSession {
 	 * @param {string} numDef Def number of the user
 	 * @returns user db name
 	 */
-	static getBdName = (numDef) => {
+	static getBdName(numDef) {
 		return "def_" + numDef.replaceAll("/", "").replaceAll("-", "").toLowerCase();
 	}
 
@@ -67,7 +67,7 @@ class UserSession {
 	}
 
     // Fonction de recuperation du nom de la table
-	getTabName = (catAssujetti) => {
+	getTabName (catAssujetti) {
 		let table = "";
 		switch (catAssujetti) {
 			case "pmc":
